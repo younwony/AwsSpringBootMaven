@@ -20,4 +20,9 @@ Mustache.js와 Mustache.java 2가지가 다있어서, 하나의 문법으로 클
 단. 반드시 앞에 위치해야하는 (bootstrap.js 등과 같은 js는 먼저 호출되도록 한다)
 
 
-###Spring Boot는 기본적으로 src/main/resources/static에 위치한 js,CSS,Img등 정적 파일들을 URL에서 /로 설정된다.
+###Spring Boot는 기본적으로 src/main/resources/static에 위치한 js,CSS,Img등 정적 파일들을 URL에서 \/로 설정된다.
+---
+
+### @Transactional(readOnly = true)
+
+ - readOnly = ture 는 트랙잭션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도가 개선되기 떄문에 등록,수정,삭제 기능이 전혀 없는 서비스 메소드에서 사용하는것을 추천한다.
