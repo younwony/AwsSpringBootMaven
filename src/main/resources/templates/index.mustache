@@ -5,13 +5,17 @@
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            <!-- userName의 true/false 여부 -->
             {{#userName}}
                 Logged in as: <span id="user">{{userName}}</span>
+                <!--Spring security 에서 기본적으로 제공하는 로그아웃 URL-->
                 <a href="/logout" class="btn btn-info active" role="button">Logout</a>
             {{/userName}}
+            <!-- 해당 값이 존재하지 않는경우 ^ 사용 -->
             {{^userName}}
+                <!-- Spring security 에서 기본적으로 제공하는 로그인 URL-->
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
-                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+<!--                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
             {{/userName}}
         </div>
     </div>
